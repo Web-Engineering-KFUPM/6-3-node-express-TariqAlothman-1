@@ -17,10 +17,16 @@ app.use(cors());
 app.use(morgan("dev"));
 
 // TODO 6.1: Create root route "/"
+app.get("/", (req, res) => {
+  res.send("Backend server is running");
+});
 
 
 // TODO 6.2: Create "/api/quote" route
-
+app.get("/api/quote", (req, res) => {
+  const quote = getRandomQuote();
+  res.json({ quote });
+});
 
 // TODO 7: Start server using app.listen
 
