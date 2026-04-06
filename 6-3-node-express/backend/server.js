@@ -7,7 +7,7 @@ import { getRandomQuote } from "./quotes.js";
 const app = express();
 
 // TODO 1: Define server port
-const PORT = process.env.PORT(3000);
+const PORT = process.env.PORT ||3000 ;
 
 
 // TODO 4: Import and Apply CORS middleware
